@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<title>Login</title>
+</h:head>
+
+<h:body>
+
+	<b:messages autoUpdate="true" id="msg" style="margin-top: 0" />
+
+	<b:form id="formLogin" style="margin-top:10%; margin-left:30%">
+		
+		<h1 style="margin: 3% auto; display: block">Realize o login</h1>
+		
+		<b:panelGrid columns="1" style="width:60%;">
+			
+			<b:panel>
+			
+			<b:column>
+				<b:label value="Login:" />
+				<b:inputText value="#{pessoaBean.pessoa.login}" required="true" requiredMessage="Informe o login" />
+			</b:column>
+			
+			<b:column>
+				<b:label value="Senha:" />
+				<b:inputSecret value="#{pessoaBean.pessoa.senha}"
+			 	required="true" requiredMessage="Informe a senha" />
+			</b:column>
+			
+			<b:column>
+				<b:commandButton value="Acessar" style="width:100%;" action="#{pessoaBean.logar}" />
+			</b:column>
+			
+			</b:panel>
+			
+		</b:panelGrid>
+		
+	</b:form>
+
+</h:body>
+
+</html>
+
